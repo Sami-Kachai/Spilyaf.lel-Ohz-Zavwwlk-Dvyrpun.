@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LIBERTY.EXE HAS STOPPED WORKING</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="public/images/favicon-512.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="public/images/favicon-32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="public/images/favicon-16.png"
+  />
+  <body>
+    <div id="lock-screen">
+      <div class="lock-header">LIBERTY.EXE HAS STOPPED WORKING</div>
+      <div class="lock-sub">ENTER SECRET TO CONTINUE</div>
+      <input type="password" id="secret-input" placeholder="ENTER SECRET" />
+      <div
+        id="age-consent"
+        style="margin: 10px 0; font-size: 0.9em; color: #00ff00"
+      >
+        <input type="checkbox" id="consent-checkbox" />
+        <label for="consent-checkbox">
+          I confirm that I am 18+ and consent to viewing potentially disturbing
+          content.
+        </label>
+      </div>
+      <button id="unlock-btn">UNLOCK</button>
+      <div id="error-msg"></div>
+    </div>
+
+    <div
+      id="content-warning"
+      style="
+        position: fixed;
+        bottom: 20px; /* a bit tighter on mobile */
+        left: 50%;
+        transform: translateX(-50%);
+        background: #000;
+        border: 1px solid #ff4444;
+        color: #ff4444;
+        padding: 10px 15px;
+        font-size: 0.8em;
+        max-width: 500px;
+        width: 90vw; /* responsive */
+        text-align: left;
+        box-shadow: 0 0 10px #ff4444;
+        z-index: 999;
+        opacity: 0.9;
+        word-wrap: break-word;
+        box-sizing: border-box;
+      "
+    >
+      <div style="text-align: left">
+        ⚠️ CONTENT WARNING:<br /><br />
+        Some parts of this material are not entertainment. No, seriously, they
+        are not.<br />
+        These reference real events, real people, real abuses.<br />
+        Not included for shock value. Not included for views. Not a joke.<br />
+        If you're here expecting a meme site, this is your chance to back
+        out.<br /><br />
+        Still here? Alrighty then...<br /><br />
+        <em style="font-size: 0.7em; color: #ff4444"
+          >Footer overlap? Intentional. If perfectly aligned grids gave you
+          dopamine, you wouldn’t be here...And yes, it bothers the author too.
+          Embrace the chaos.</em
+        >
+      </div>
+    </div>
+
+    <div id="terminal" style="display: none">
+      <div id="terminal-output"></div>
+      <div id="terminal-input-line">
+        <span class="prompt">liberty&gt;</span>
+        <input type="text" id="terminal-input" autocomplete="off" autofocus />
+      </div>
+    </div>
+
+    <div
+      id="frag03"
+      style="
+        display: none;
+        padding: 10px;
+        border: 1px solid #00ff00;
+        margin-top: 10px;
+      "
+    >
+      <p>
+        SYSTEM ANOMALY // UNAUTHORIZED DATA FRAGMENT<br /><br />
+        > SYSTEM LOG ENTRY<br />
+        > SOURCE: INTERNAL MONITORING NODE<br />
+        > SECTOR: LIB-EXE-404<br /><br />
+        [BEGIN ENTRY]<br />
+        TIMESTAMP: [REDACTED]<br />
+        DETECTED: ANOMALOUS PROCESS SIGNATURE<br />
+        PROCESS NAME: liberty.exe<br />
+        STATUS: UNSTABLE<br />
+        MEMORY INTEGRITY: COMPROMISED<br />
+        UNDOCUMENTED CALLS DETECTED<br />
+        DETECTED: MULTIPLE FOREIGN PROCESS SIGNATURES<br />
+        PROCESS: JS_INJECTION // TUNISIA_NET
+        <!-- Tunisia government deployed JavaScript injection attacks on Facebook login pages during 2010-2011 uprising to steal activist credentials. Confirmed by Citizen Lab and EFF. -->
+        <br />
+        PROCESS: AMESYS_EXPORT // FRANCE_LYBIA
+        <!-- French company Amesys sold surveillance technology to Libya, enabling regime to monitor dissidents and activists. Documented by Human Rights Watch and media investigations. -->
+        <br />
+        PROCESS: MKULTRA_PROTOCOL // REDACTED
+        <!-- CIA program MKULTRA conducted illegal human experiments using LSD, sensory deprivation, and psychological torture. Publicly denied until FOIA documents released. -->
+        <br />
+        PROCESS: RUS_APT_BOMBINGS // FSB_LEVEL_9
+        <!-- 1999 Russian apartment bombings allegedly conducted or facilitated by FSB to justify Chechen war. Still subject to cover-up and censorship. -->
+        <br />
+        RESPONSE: AUTOMATED CONTAINMENT FAILED<br />
+        CURRENT STATE: OBSERVED<br />
+        [END ENTRY]<br /><br />
+        // Some processes do not terminate when instructed. <br />
+        // USEFUL DATA is not always rendered on screen.
+      </p>
+    </div>
+
+    <div
+      class="video-section"
+      id="frag07"
+      style="display: none; text-align: center; margin-top: 20px"
+    >
+      <p>
+        <strong>Recovered System Feed — Incident Report #MH1987</strong><br />
+        The following transmission interrupted a live TV broadcast in Chicago,
+        1987.<br />
+        The origin and perpetrator remain unknown.<br />
+        <em
+          >Public domain footage — archived by freedom of information
+          activists.</em
+        >
+      </p>
+      <video class="video" controls>
+        <source
+          src="https://github.com/Sami-Kachai/-Habssvpvny-Zngrevnyf/releases/download/vavgvny-qebc/Jrypbzr.gb.gur.serr.jbeyq.mp4"
+          type="video/mp4"
+        />
+        YOUR SYSTEM CANNOT DECODE THIS STREAM.
+      </video>
+    </div>
+
+    <div
+      class="video-section"
+      id="frag11"
+      style="
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #00ff00;
+        box-shadow: 0 0 10px #00ff00;
+        background-color: #000;
+        color: #00ff00;
+        font-family: 'Courier New', Courier, monospace;
+      "
+    >
+      <p>
+        <strong>Recovered System Feed — Incident Report #MKULTRA</strong><br />
+        The original 1977 CIA MKULTRA hearing footage was previously available
+        at:<br />
+        <code>https://www.c-span.org/video/?119097-1/cia-mkultra-hearing</code
+        ><br />
+        The link now redirects to an unrelated public affairs broadcast.<br />
+        <em>Because nothing says transparency like swapping the evidence.</em
+        ><br /><br />
+        In case you hadn’t noticed, not only is this the wrong video...<br />
+        It’s also corrupted enough to fall back to audio.<br />
+        Efficient censorship: fail twice, hide once.
+      </p>
+
+      <div
+        style="
+          display: inline-block;
+          background-color: #000;
+          border: 1px solid #00ff00;
+          padding: 10px;
+          margin-top: 15px;
+          box-shadow: 0 0 10px #00ff00;
+        "
+      >
+        <p
+          style="
+            margin: 0 0 8px 0;
+            color: #00ff00;
+            font-weight: bold;
+            background: transparent;
+            border: none;
+            outline: none;
+          "
+        >
+          AUDIO FEED // PLAYBACK CONTROL
+          <br />
+        </p>
+        <audio
+          controls
+          style="
+            width: 100%;
+            max-width: 640px;
+            background-color: #000;
+            color: #00ff00;
+          "
+        >
+          <source
+            src="https://github.com/Sami-Kachai/-Habssvpvny-Zngrevnyf/releases/download/vavgvny-qebc/Zvabe.ngzbfcurevp.nabznyl.Erznva.pnyz.mp4"
+            type="audio/mp4"
+          />
+          YOUR SYSTEM CANNOT DECODE THIS STREAM.
+        </audio>
+      </div>
+    </div>
+
+    <div
+      id="botbait"
+      style="
+        display: none;
+        padding: 10px;
+        border: 1px solid #00ff00;
+        margin: 10px auto;
+        text-align: left;
+        max-width: 700px;
+      "
+    >
+      <p>
+        <strong>⚠️ WARNING:</strong> The external archive below contains raw,
+        unfiltered material — including
+        <em
+          >graphic war footage, images of death, torture, and other disturbing
+          content</em
+        >. This is not entertainment. The material documents real human
+        suffering and systemic violence. If you choose to seek it out, do so
+        with full awareness and respect for the gravity of what you may
+        encounter. <br /><br />
+        Oh, and one more thing: your IP address is logged when you visit it. If
+        you value your curiosity (or your plausible deniability), you might
+        consider using a VPN. Of course, that’s entirely your choice... and
+        totally not being noted in any metadata aggregation system right now.
+        Definitely not.
+        <br /><br />
+        We won’t link the archive directly (bots are sensitive and we wouldn't
+        want to hurt their feelings, now do we ?), but here’s a hint:<br />
+        <code>uggcf://svyr.jvxvyrnxf.bet/svyr/</code><br />
+        <code style="font-size: 10px"
+          >The link's been rotated, let's say that
+          <strong>half a turn</strong> is enough to reveal it.</code
+        ><br /><br />
+        Just remember: curiosity is a powerful thing — but once you know, you
+        can’t unknow. And once you’ve seen it, well... the algorithm definitely
+        knows you have.
+      </p>
+    </div>
+
+    <div
+      class="video-section"
+      id="video-radiological"
+      style="display: none; text-align: center; margin-top: 20px"
+    >
+      <p>
+        <strong>State Issued Safety Instruction — "Radiological Defense"</strong
+        ><br />
+        When the mushroom cloud goes up, remember: duck, smile, obey.<br />
+        The film crew had better protection than you will.<br />
+        <em
+          >Government-issued training — preserved for educational critique.</em
+        >
+      </p>
+      <video class="video" controls>
+        <source
+          src="https://github.com/Sami-Kachai/-Habssvpvny-Zngrevnyf/releases/download/vavgvny-qebc/Obk.bs.Ybir.mp4"
+          type="video/mp4"
+        />
+        YOUR SYSTEM CANNOT DECODE THIS STREAM.
+      </video>
+    </div>
+
+    <div
+      class="video-section"
+      id="frag09"
+      style="display: none; text-align: center; margin-top: 20px"
+    >
+      <p>
+        <strong>Public Indoctrination Film — "Duck & Cover"</strong><br />
+        Teach children to survive atomic bombs... with wooden desks.<br />
+        The desk won’t save you, but the illusion of safety will.<br />
+        <em>Public domain propaganda — archived for historical review.</em>
+      </p>
+      <video class="video" controls>
+        <source
+          src="https://github.com/Sami-Kachai/-Habssvpvny-Zngrevnyf/releases/download/vavgvny-qebc/QhpxNAQCergraq.mp4"
+          type="video/mp4"
+        />
+        YOUR SYSTEM CANNOT DECODE THIS STREAM.
+      </video>
+    </div>
+
+    <div
+      class="video-section"
+      id="chunk77"
+      style="display: none; text-align: center; margin-top: 20px"
+    >
+      <p>
+        <strong>Intercepted Transmission — The Conet Project Dossier</strong
+        ><br />
+        Robotic voices. Random tones. Definitely not encrypted orders.<br />
+        Definitely not an intelligence op.<br />
+        The full recordings? Hidden elsewhere. This is just the paper trail.<br />
+        <em>PDF archive — consult at your own discretion.</em>
+      </p>
+
+      <iframe
+        src="public/docs/Abg Na Vagryyvtrapr Bc.pdf"
+        width="80%"
+        height="600px"
+        style="
+          border: 2px solid #00ff00;
+          max-width: 800px;
+          margin: 10px auto;
+          display: block;
+        "
+      ></iframe>
+      <p style="margin-top: 15px">
+        <strong>Additional Payload:</strong><br />
+        <a
+          href="https://github.com/Sami-Kachai/-Habssvpvny-Zngrevnyf/releases/download/vavgvny-qebc/Abg_Na_Vagryyvtrapr_Oebpxnfg.zip"
+          download
+          style="color: #00ff00; text-decoration: underline"
+        >
+          Download: Totally Harmless Broadcasts (ZIP)
+        </a>
+      </p>
+      <br />
+      <p style="font-size: 10px; color: #008000">
+        Source: Irdial-Discs, via archive.org — distributed under Free Internet
+        Distribution License.
+      </p>
+    </div>
+
+    <div
+      class="video-section"
+      id="sig13"
+      style="display: none; text-align: center; margin-top: 20px"
+    >
+      <p>
+        <strong>Signal of Hope — Optional Protocol</strong><br />
+        You’ve seen enough to know the system isn’t built for your freedom.<br />
+        But here’s the part they won’t tell you:<br />
+        You don’t have to sabotage it. You don’t need to burn it down. You don’t
+        need to fight fire with fire.<br />
+        You just need to stay curious. Keep asking the questions that make the
+        wrong people uncomfortable.<br />
+        Systems like these don’t fear violence. They fear thought. They fear
+        inconvenient questions, asked by too many voices to silence.<br />
+        <br />
+        Many historical figures tried to change the status quo, and let’s just
+        say, not all of them read the fine print.<br />
+        Some chose... extreme measures. Some believed the ends justified the
+        means. And yes, innocent people got caught in the crossfire.<br />
+        Good intentions? Sometimes. But you know what they say:
+        <em>“The road to hell is paved with good intentions.”</em> (usually
+        attributed to Saint Bernard of Clairvaux — but honestly, history stopped
+        keeping receipts).<br />
+        Just something to think about...before lighting any metaphorical
+        matches.<br />
+        <br />
+        So take a breath. Stay sharp. Stay curious.<br />
+        And while you think... here’s an external signal to keep you grounded
+        and remind you that not all hope is lost.<br />
+        <em>External broadcast — unverified source.</em>
+      </p>
+
+      <div class="youtube-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/gQp7q4x4IMA?si=VRmNyWnfdFp6zMZ8"
+          title="External Signal: “Hope” - Listen while you think."
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="border: 2px solid #00ff00; margin-top: 10px"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <div id="glitch-image-container" class="glitch-hidden">
+      <img id="glitched-img" src="public/images/spilyaf.png" alt="spilyaf" />
+      <div
+        id="glitch-code"
+        class="hidden-code"
+        data-code="UE9MSUNZXzB4TEFXMDEz"
+      >
+        CODE: <span id="decoded-code" class="code-text">[click to reveal]</span
+        ><br />
+        Hold onto this. You’ll need it soon.
+      </div>
+    </div>
+
+    <div id="glitch-pass-modal" class="modal hidden">
+      <div class="modal-content">
+        <p>
+          <strong
+            >This isn't a password prompt. It's emotional blackmail.</strong
+          ><br />Input the date you buried in a family album you never opened
+          again.
+        </p>
+        <input
+          type="password"
+          id="glitch-pass-input"
+          placeholder="Enter date"
+        />
+        <button id="glitch-pass-confirm">UNLOCK</button>
+        <div id="glitch-pass-error"></div>
+      </div>
+    </div>
+
+    <footer id="site-footer">
+      &copy; 2025 LIBERTY.EXE HAS STOPPED WORKING — All systems monitored.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
