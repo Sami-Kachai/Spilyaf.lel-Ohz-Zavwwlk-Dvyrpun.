@@ -1,0 +1,33 @@
+# Node, though unused
+node_modules/
+
+# macOS noise
+.DS_Store
+
+# VSCode workspace
+.vscode/
+
+# OS logs
+Thumbs.db
+ehthumbs.db
+*.log
+
+# Backup/Temp
+*.bak
+*.tmp
+*.swp
+
+# Build artifacts (if ever added)
+dist/
+build/
+out/
+
+# Environment (if someone adds secrets)
+.env
+.env.*
+
+# Personal junk
+*.zip
+*.rar
+*.7z
+__MACOSX/
