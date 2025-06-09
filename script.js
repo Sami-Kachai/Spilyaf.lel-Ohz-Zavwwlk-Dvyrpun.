@@ -174,13 +174,10 @@ terminalInput.addEventListener('input', (e) => {
     const inputLength = terminalInput.value.length;
     const maskedLength = actualPasswordInput.length;
 
-    // If user is adding input (e.g., typing or pasting)
     if (inputLength > maskedLength) {
       const added = inputLength - maskedLength;
       actualPasswordInput += e.data?.slice(0, added) || '';
-    }
-    // If user is deleting
-    else if (inputLength < maskedLength) {
+    } else if (inputLength < maskedLength) {
       const diff = maskedLength - inputLength;
       actualPasswordInput = actualPasswordInput.slice(0, -diff);
     }
