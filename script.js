@@ -141,10 +141,9 @@ terminalInput.addEventListener('keydown', (e) => {
     }
     return;
   }
+
   if (e.key === 'Enter') {
-    if (isLocked) {
-      return;
-    }
+    if (isLocked) return;
 
     const command = isPasswordMode
       ? actualPasswordInput.trim()
@@ -154,34 +153,38 @@ terminalInput.addEventListener('keydown', (e) => {
       processPassInput(command);
     } else {
       processCommand(command);
+      lastCommand = command;
     }
 
     terminalInput.value = '';
     actualPasswordInput = '';
-    lastCommand = command;
-  } else if (e.key === 'ArrowUp') {
+  }
+
+  if (e.key === 'ArrowUp' && !isPasswordMode) {
     terminalInput.value = lastCommand;
     setTimeout(() => {
       terminalInput.selectionStart = terminalInput.selectionEnd =
         terminalInput.value.length;
     }, 0);
-  } else if (
-    currentPassMode &&
-    ![
-      'Enter',
-      'ArrowUp',
-      'ArrowDown',
-      'ArrowLeft',
-      'ArrowRight',
-      'Backspace',
-    ].includes(e.key)
-  ) {
-    e.preventDefault();
-    actualPasswordInput += e.key;
-    terminalInput.value += '*';
-  } else if (currentPassMode && e.key === 'Backspace') {
-    e.preventDefault();
-    actualPasswordInput = actualPasswordInput.slice(0, -1);
+  }
+});
+
+terminalInput.addEventListener('input', (e) => {
+  if (currentPassMode && isPasswordMode) {
+    const inputLength = terminalInput.value.length;
+    const maskedLength = actualPasswordInput.length;
+
+    // If user is adding input (e.g., typing or pasting)
+    if (inputLength > maskedLength) {
+      const added = inputLength - maskedLength;
+      actualPasswordInput += e.data?.slice(0, added) || '';
+    }
+    // If user is deleting
+    else if (inputLength < maskedLength) {
+      const diff = maskedLength - inputLength;
+      actualPasswordInput = actualPasswordInput.slice(0, -diff);
+    }
+
     terminalInput.value = '*'.repeat(actualPasswordInput.length);
   }
 });
@@ -931,7 +934,7 @@ function processPassInput(passInput) {
         terminalInput.focus();
       } else {
         printOutput(
-          'ACCESS DENIED — HINT: SIGNAL TRACES ARE NEVER COMPLETE — START WITH THE HEADER.'
+          'ACCESS DENIED — HINT: CALENDAR ENTRY NOT FOUND IN THIS SYSTEM.'
         );
       }
     });
@@ -967,7 +970,7 @@ function processPassInput(passInput) {
         terminalInput.focus();
       } else {
         printOutput(
-          'ACCESS DENIED — HINT: CALENDAR ENTRY NOT FOUND IN THIS SYSTEM.'
+          'ACCESS DENIED — HINT: FILE "REGRET.TXT" IS EMOTIONALLY ENTANGLED. DELETE ATTEMPT BLOCKED.'
         );
       }
     });
